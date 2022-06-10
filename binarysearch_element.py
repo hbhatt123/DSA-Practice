@@ -13,7 +13,7 @@ def binarysearch(ls, x):
             high = mid -1
         else:
             low = mid +1
-            
+   return -1    
         
 if __name__ == '__main__':
     ls = [10,20,30,40,50,60]
