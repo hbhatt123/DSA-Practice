@@ -1,4 +1,5 @@
 def read(n: int, book: [int], target: int) -> str:
+  # using hashmap
 
   
     map = {}
