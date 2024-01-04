@@ -17,6 +17,21 @@ def max_profit(ls):
             max_profit = ls[i] - buy
         i = i + 1  
     return max_profit
+
+def maxprofit(ls):
+    n = len(ls)
+    minv = ls[0]
+    maxprofit = 0
+    
+    for i in range(n):
+        # print(ls[i])
+        cost = ls[i] - minv 
+        maxprofit = max(cost, maxprofit)
+        minv = min(ls[i], minv)
+    
+    print("max profit is", maxprofit)
+    return maxprofit
+
     
     
     
