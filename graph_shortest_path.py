@@ -10,7 +10,7 @@ class Graph:
         print("Graph Dict:", self.graph_dict)
 
     def get_paths(self, start, end, path=[]):
-        path = path + [start]
+        path = path + [start] # add all city into a path
         print("path",path)
         if start == end:
             return [path]
@@ -22,9 +22,9 @@ class Graph:
         for node in self.graph_dict[start]:
             print("node",node)
             if node not in path:
-                new_paths = self.get_paths(node, end, path)
+                new_paths = self.get_paths(node, end, path)  # recursively add one  path route cities into new path - Mumbai -> Paris->NewYork (one path)
                 for p in new_paths:
-                    paths.append(p)
+                    paths.append(p)  append all possible paths from Mumbai -> Newyork 
 
         return paths
 
