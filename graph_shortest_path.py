@@ -32,7 +32,7 @@ class Graph:
         path = path + [start]
 
         if start == end:
-            return path
+            return path  # require single path
 
         if start not in self.graph_dict:
             return None
