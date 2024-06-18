@@ -32,7 +32,15 @@ class Linkedlist:
             temp = prev_node.next
             prev_node.next = new_node
             new_node.next = temp
-            
+    def reverse(self):
+        prev = None
+        cur = self.data
+        while cur is not None:
+            next = cur.next
+            cur.next = prev
+            prev = cur
+            cur = next
+        self.head = prev    
         
     def search(self,data):
         if self.head.data == data:
